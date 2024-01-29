@@ -20,20 +20,21 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     'inline-grid',
     'border-2',
     'h-80',
-    'w-full',
   );
 
   const router = useRouter();
 
   return (
     <div className={verticalFeatureClass}>
-      <div className="p-6 sm:w-1/2">
+      <div className="w-96 p-6 sm:w-1/2">
         <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
       </div>
 
-      <div className="w-64 text-left sm:w-1/2 sm:px-6">
-        <h3 className="text-1xl font-semibold text-gray-900">{props.title}</h3>
-        <div className="text-1xl mt-6 leading-9">{props.description}</div>
+      <div className="w-66 w-full text-left sm:w-1/2 sm:px-6">
+        <h3 className="text-1xl w-48 font-semibold text-gray-900">
+          {props.title}
+        </h3>
+        <div className="text-1xl mt-5 w-64 leading-9">{props.description}</div>
         <Link style={{ color: '#03A9F4' }} href="#">
           <button>Read Now</button>
         </Link>
