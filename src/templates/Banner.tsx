@@ -7,11 +7,11 @@ import { Section } from '../layout/Section';
 const Banner = () => (
   <Section>
     <CTABanner
-      title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-      subtitle="Start your Free Trial."
+      title="Subscribe and get daily update of cashless claim process"
+      subtitle="Stay Tuned"
       button={
         <Link href="#">
-          <Button>Get Started</Button>
+          <Button>Subscribe</Button>
         </Link>
       }
     />

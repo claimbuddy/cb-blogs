@@ -1,5 +1,4 @@
 import className from 'classnames';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 type IVerticalFeatureRowProps = {
@@ -8,6 +7,7 @@ type IVerticalFeatureRowProps = {
   image: string;
   imageAlt: string;
   reverse?: boolean;
+  href: string;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -35,9 +35,9 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
           {props.title}
         </h3>
         <div className="text-1xl mt-5 w-64 leading-9">{props.description}</div>
-        <Link style={{ color: '#03A9F4' }} href="#">
-          <button>Read Now</button>
-        </Link>
+        <a style={{ color: '#03A9F4' }} href={props.href} target="_blank">
+          Read Now
+        </a>
       </div>
     </div>
   );
