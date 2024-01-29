@@ -1,6 +1,6 @@
 export const AppConfig = {
-  site_name: 'Starter',
-  title: 'Nextjs Starter',
-  description: 'Starter code for your Nextjs Boilerplate with Tailwind CSS',
+  site_name: 'ClaimBuddy Blogs',
+  title: 'ClaimBuddy Blogs',
+  description: 'Blogs for cashless claims',
   locale: 'en',
 };
