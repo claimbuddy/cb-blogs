@@ -27,7 +27,7 @@ const Hero = () => (
         }
         description="Solutions and Information for cashless claims"
         button={
-          <Link href="#">
+          <Link href="#" legacyBehavior>
             <Button xl>Start Reading Now</Button>
           </Link>
         }

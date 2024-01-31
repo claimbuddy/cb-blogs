@@ -7,16 +7,37 @@ type INavbarProps = {
 };
 
 const NavbarTwoColumns = (props: INavbarProps) => (
-  <div className="navbar-wrapper ml-2 flex flex-wrap items-center justify-between bg-gray-100">
-    <div>
-      <Link href="/">{props.logo}</Link>
+  <div className="navbar-wrapper fixed left-0 top-0 z-50 w-full bg-gradient-to-r from-blue-500 via-blue-600 to-red-600">
+    <div className="container mx-auto py-4">
+      <div className="flex items-center justify-between">
+        <div>
+          <Link legacyBehavior href="/">
+            <a className="text-2xl font-bold text-white">{props.logo}</a>
+          </Link>
+        </div>
+
+        <nav className="hidden md:block">
+          <ul className="flex items-center text-xl font-medium text-white">
+            {props.children}
+          </ul>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            // Add logic for mobile menu toggle (e.g., using state)
+            className="text-white focus:outline-none"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
     </div>
 
-    <nav>
-      <ul className="navbar m-4 flex items-center text-xl font-medium text-gray-800">
-        {props.children}
-      </ul>
-    </nav>
+    {/* Mobile Menu (Hidden by default) */}
+    <div className="bg-gradient-to-r from-blue-500 via-blue-600 to-red-600 p-4 text-white md:hidden">
+      <ul className="flex flex-col items-center">{props.children}</ul>
+    </div>
 
     <style jsx>
       {`
