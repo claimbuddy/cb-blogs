@@ -1,8 +1,11 @@
 import className from 'classnames';
+import React from 'react';
 
 type IButtonProps = {
   xl?: boolean;
   children: string;
+  onClick?: () => void;
+  className?: string;
 };
 
 const Button = (props: IButtonProps) => {
@@ -20,7 +23,7 @@ const Button = (props: IButtonProps) => {
       <style jsx>
         {`
           .btn {
-            @apply inline-block rounded-md text-center;
+            @apply inline-block rounded-md text-center py-10 px-10;
           }
 
           .btn-base {

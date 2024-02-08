@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Meta } from '../layout/Meta';
 import { initGA, logPageView } from '../utils/analytics'; // Import the utility you created
 import { AppConfig } from '../utils/AppConfig';
-import { Banner } from './Banner';
+import { Banner, CalendlyWidget } from './Banner';
 import { Footer } from './Footer';
 import { Hero } from './Hero';
 import { VerticalFeatures } from './VerticalFeatures';
@@ -29,8 +29,22 @@ const Base = () => {
       <Meta title={AppConfig.title} description={AppConfig.description} />
       <Hero />
       <VerticalFeatures />
-      <Banner />
+      {/* NewsArticle about Cashless - NewsSection */}
+      {/* BlogsSection */}
+      {/* AdSection */}
+      <div className="flex items-center justify-center">
+        <div className="w-1/2">
+          <Banner />
+        </div>
+        <div className="mx-4">Or</div>
+        <div className="w-1/2">
+          <CalendlyWidget />
+        </div>
+      </div>
+      {/* CalendlyContactFormSection */}
+      {/* Left Right */}
       <Footer />
+      {/* LeftFooter, LeftFooter */}
     </div>
   );
 };
